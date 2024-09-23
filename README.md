@@ -3,8 +3,7 @@
 This project utilizes the FP-Growth algorithm for Market Basket Analysis, aiming to identify patterns and associations among items within a transaction dataset. This insight can aid businesses in making data-driven decisions.
 
 ## Tech Stack
-- **MERN Stack:**
-  - MongoDB
+  - MySQL
   - Express.js
   - React
   - Node.js
