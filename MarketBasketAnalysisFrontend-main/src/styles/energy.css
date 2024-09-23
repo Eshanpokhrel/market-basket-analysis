@@ -1,0 +1,30 @@
+/* Add this to your CSS file */
+.energy-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.energy-info {
+  margin-bottom: 10px;
+}
+
+.energy-info p {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.purchase_button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.purchase_button:hover {
+  background-color: #0056b3;
+}
+
+/* Adjust styles as needed */

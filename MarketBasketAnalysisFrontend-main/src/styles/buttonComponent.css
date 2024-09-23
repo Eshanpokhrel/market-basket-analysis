@@ -1,0 +1,7 @@
+.reusable__btn{
+    background-color: rebeccapurple;
+    padding: 10px 20px 10px 20px;
+}
+.reusable__btn a{
+    text-decoration: none;
+}
