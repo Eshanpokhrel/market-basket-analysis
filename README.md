@@ -1,6 +1,6 @@
 # Market Basket Analysis with FP-Growth Algorithm
 ## Overview
-This project implements Market Basket Analysis using the FP-Growth algorithm. The goal is to discover patterns and associations among items in a dataset of transactions, helping businesses make informed decisions.
+This project utilizes the FP-Growth algorithm for Market Basket Analysis, aiming to identify patterns and associations among items within a transaction dataset. This insight can aid businesses in making data-driven decisions.
 
 ## Tech Stack
 - **MERN Stack:**
@@ -11,13 +11,14 @@ This project implements Market Basket Analysis using the FP-Growth algorithm. Th
 
 ## Features
 - **FP-Growth Algorithm:**
-  - Efficient mining of frequent itemsets using the FP-Growth algorithm.
-  - Association rule generation to discover interesting patterns.
+  - Efficiently mines frequent itemsets with the FP-Growth algorithm.
+  - Generates association rules to uncover significant patterns.
 
 - **Interactive Frontend:**
-  - User-friendly interface built with React for visualizing and exploring analysis results.
-  - Intuitive data representation and dynamic updates for a seamless user experience.
+  - A user-friendly interface crafted with React to visualize and explore the analysis results.
+  - Offers intuitive data representation and dynamic updates for an engaging user experience.
 
 - **Scalable Backend:**
-  - Robust Express.js backend to handle data processing and communication with the database.
-  - MongoDB integration for storing and retrieving transactional data efficiently.
+  - A robust backend built with Express.js to manage data processing and facilitate communication 
+    with the database.
+  - Integrates MongoDB for efficient storage and retrieval of transactional data
