@@ -119,13 +119,13 @@ const UserLayout = () => {
       link: "/home/result",
       role: user.role == "user" ? "user" : null,
     },
-    {
-      id: 6,
-      name: "Connect To Ecom",
-      icon: <FaRegGem />,
-      link: "/home/ecom",
-      role: user.role == "user" ? "user" : null,
-    },
+    // {
+    //   id: 6,
+    //   name: "Connect To Ecom",
+    //   icon: <FaRegGem />,
+    //   link: "/home/ecom",
+    //   role: user.role == "user" ? "user" : null,
+    // },
     {
       id: 7,
       name: "User Management",
