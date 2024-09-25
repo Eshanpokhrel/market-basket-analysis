@@ -31,13 +31,13 @@ const energyController = {
       const sign = generateSign(msg);
       const formData = {
         amount: energyOrder.amount,
-        failure_url: `${process.env.CLIENT_URL}/esewa-payment-error`,
+        failure_url: `${process.env.CLIENT_URL}esewa-payment-error`,
         product_delivery_charge: "0",
         product_service_charge: "0",
         product_code: process.env.ESEWA_PRODUCT_CODE,
         signature: sign,
         signed_field_names: "total_amount,transaction_uuid,product_code",
-        success_url: `${process.env.SERVER_URL}/api/energy/esewa-success`,
+        success_url: `${process.env.SERVER_URL}api/energy/esewa-success`,
         tax_amount: "0",
         total_amount: energyOrder.amount,
         transaction_uuid: t_uuid,
@@ -67,7 +67,7 @@ const energyController = {
       console.log(decodedData);
 
       if (decodedData.status !== "COMPLETE") {
-        return res.redirect(`${process.env.CLIENT_URL}/esewa-payment-error`);
+        return res.redirect(`${process.env.CLIENT_URL}esewa-payment-error`);
       }
       const message = decodedData.signed_field_names
         .split(",")
@@ -77,7 +77,7 @@ const energyController = {
       const signature = generateSign(message);
 
       if (signature !== decodedData.signature) {
-        return res.redirect(`${process.env.CLIENT_URL}/esewa-payment-error`);
+        return res.redirect(`${process.env.CLIENT_URL}esewa-payment-error`);
       }
     await EnergyPurchase.update({payment_status : "completed", transaction_code : decodedData.transaction_code},{
         where: {
@@ -99,10 +99,10 @@ const energyController = {
       }})
 
 
-      return res.redirect(`${process.env.CLIENT_URL}/home`);
+      return res.redirect(`${process.env.CLIENT_URL}home`);
     } catch (err) {
       console.log(err);
-      return res.redirect(`${process.env.CLIENT_URL}/esewa-payment-error`);
+      return res.redirect(`${process.env.CLIENT_URL}esewa-payment-error`);
     }
   },
    async checkEnergy(req,res){
