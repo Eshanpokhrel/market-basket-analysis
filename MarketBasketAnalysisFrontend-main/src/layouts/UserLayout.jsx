@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { handleSuccess } from "../utils/toast.js";
 import {
   FaTachometerAlt,
-  FaChartBar,
   FaSignOutAlt,
   FaUpload,
   FaRegGem,
@@ -35,6 +34,7 @@ const UserLayout = () => {
   }
 
   // console.log(user)
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (toastMessage !== null) {
       handleSuccess(toastMessage);
@@ -65,7 +65,7 @@ const UserLayout = () => {
     }, 18000000); //every 5 hrs
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const handleLogout = (e) => {
     e.preventDefault();
