@@ -31,7 +31,7 @@ const energyController = {
       const sign = generateSign(msg);
       const formData = {
         amount: energyOrder.amount,
-        failure_url: `${process.env.CLIENT_URL}/esewa-payment-error`,
+        failure_url: `${process.env.CLIENT_URL}esewa-payment-error`,
         product_delivery_charge: "0",
         product_service_charge: "0",
         product_code: process.env.ESEWA_PRODUCT_CODE,
