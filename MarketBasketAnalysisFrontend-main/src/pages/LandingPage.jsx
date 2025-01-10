@@ -5,47 +5,47 @@ import "../styles/Landingpage.css";
 
 
 
-import ButtonComponent from "../component/ButtonComponent";
+// import ButtonComponent from "../component/ButtonComponent";
 
 export default function LandingPage() {
  
-  const plansData = [
-    {
-      name: "Basic",
-      price: "$19/month",
-      features: ["1000 Transactions  ✓",
-       "Email Support  ✓",
-        "Basic Reporting  ✓",
-        "24/7 support X",'Dedicated Account Manager X',
-      ],
+  // const plansData = [
+  //   {
+  //     name: "Basic",
+  //     price: "$19/month",
+  //     features: ["1000 Transactions  ✓",
+  //      "Email Support  ✓",
+  //       "Basic Reporting  ✓",
+  //       "24/7 support X",'Dedicated Account Manager X',
+  //     ],
         
-      buttonLabel: "choose a plan",
-    },
-    {
-      name: "Pro",
-      price: "$49/month",
-      features: [
-        "Unlimited Transactions ✓ ",
-        "Priority Email Support ✓",
-        "Advanced Reporting ✓",
-        "Item Recommendations ✓",
-        "Dedicated Account Manager X",
-      ],
-      buttonLabel: "choose a plan",
-    },
-    {
-      name: "Enterprise",
-      price: "100rs/month",
-      features: [
-        "Custom Transactions ✓",
-        "24/7 Support ✓",
-        "Custom Reporting ✓",
-        "Item Recommendations ✓",
-        "Dedicated Account Manager ✓",
-      ],
-      buttonLabel: "choose a plan",
-    },
-  ];
+  //     buttonLabel: "choose a plan",
+  //   },
+  //   {
+  //     name: "Pro",
+  //     price: "$49/month",
+  //     features: [
+  //       "Unlimited Transactions ✓ ",
+  //       "Priority Email Support ✓",
+  //       "Advanced Reporting ✓",
+  //       "Item Recommendations ✓",
+  //       "Dedicated Account Manager X",
+  //     ],
+  //     buttonLabel: "choose a plan",
+  //   },
+  //   {
+  //     name: "Enterprise",
+  //     price: "100rs/month",
+  //     features: [
+  //       "Custom Transactions ✓",
+  //       "24/7 Support ✓",
+  //       "Custom Reporting ✓",
+  //       "Item Recommendations ✓",
+  //       "Dedicated Account Manager ✓",
+  //     ],
+  //     buttonLabel: "choose a plan",
+  //   },
+  // ];
 
   return (
     <>
@@ -76,10 +76,10 @@ export default function LandingPage() {
               <h1>Welcome to Market Basket Analysis Platform</h1>
               <h3> A Data mining platform</h3>
               <p>
-                Uncover hidden trends and patterns in your sales data. Our
-                platform uses advanced market basket analysis to help you
-                understand customer buying behavior and optimize your marketing
-                strategies.
+                  Uncover hidden trends and patterns in your sales data. Our
+                  platform uses advanced market basket analysis to help you
+                  understand customer buying behavior and optimize your marketing
+                  strategies.
               </p>
             </div>
             <div className="container-login-register">
@@ -97,7 +97,7 @@ export default function LandingPage() {
         <div>
           <div>
             <div>
-              <h2>Energy Buying</h2>
+              <h1>Energy Buying</h1>
               <p>
                 Buy energy for analysis. Each energy costs 20 Rs. You get 1 free
                 energy to start with, after which you need to buy more. 1 energy
@@ -110,12 +110,12 @@ export default function LandingPage() {
               <h2>Free Energy</h2>
               <p>Get one free energy on registration</p>
               <ul>
-                <li>1 Free Energy</li>
+                <li>1 Free Plan</li>
                 <li>1 Energy per Analysis</li>
               </ul>
             </div>
             <div className="plans-card">
-              <h2>Energy</h2>
+              <h2>Premium Plan</h2>
               <p>20 Rs per each energy</p>
               <ul>
                 <li>1 Energy per Analysis</li>

@@ -6,29 +6,32 @@
 }
 
 .container-landing-page-mainpage {
-  max-width: 100%;
+  background-color: #d4d4ce;
   margin-right: auto;
   margin-left: auto;
-  padding: 120px;
+  height: 100vh;
+  padding: 100px;
 }
 .container-landing-page-mainpage h3{
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 3.3rem;
+  padding: 0 0 30px 50px;
+  color: #287094;
 }
 
 .container-landing-page-mainpage h1 {
-  font-size: 3rem;
+  padding: 50px;
+  font-size: 5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0.9rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
 .container-landing-page-mainpage p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.75;
-  color: #4b5563;
+  padding: 0 0 30px 50px;
+  color: #023246;
   font-family: "PT Serif", serif;
   font-weight: 400;
   font-style: normal;
@@ -36,15 +39,15 @@
 
 .container-landing-page-mainpage a {
   display: inline-block;
-  margin-right: 1rem;
   padding: 0.8rem 1.2rem;
+  width: 9rem;
   text-decoration: none;
-  font-size:.9rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #010308;
-  border-radius: 0.375rem;
+  color: #2f4156;
+  border: 3px solid #2f4156;
   transition: background-color 0.3s ease-in-out;
+  text-align: center;
 }
 .container-landing-page-mainpage a:hover {
 transition: .5s ease-in-out;
@@ -52,7 +55,10 @@ transform: scale(1.1);
 /* border: 1px solid red; */
 }
 .container-login-register {
-  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0 30px 0;
 }
 
 .container-landing-page-mainpage a:hover {
@@ -62,14 +68,24 @@ transform: scale(1.1);
 }
 .container-pricing-plans {
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  padding: 40px;  
-  padding-top: 60px;
-  padding-bottom: 80px;
+  height: 100vh;
+  background-color: #c8d9e6;
+  padding: 100px;
+}
+
+.container-pricing-plans h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: teal;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  padding: 50px;
+  margin-bottom: 20px;
+  font-style: normal;
 }
 
 .container-pricing-plans h2 {
-  color: #0f0303;
+  color: rgb(0, 0, 51);
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
   margin-bottom: 20px;
@@ -77,22 +93,22 @@ transform: scale(1.1);
 }
 
 .container-pricing-plans p {
-  color: #191515;
-  font-weight: 500;
-  font-size: 1rem;
+  color: #1f1616;
+  font-weight: 400;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 .plans-card {
-  margin-top: 40px;
-  border: 1px solid #ccc;
+  border: 2px solid #2f4156;
   border-radius: 8px;
-  min-width: 300px;
-  min-height: 340px;
+  width: 400px;
+  height: 380px;
   display: flex;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  padding: 30px;
+  padding: 50px;
 }
 .plans-card:hover{
   background-color: rgb(238, 235, 235);
@@ -119,11 +135,13 @@ transform: scale(1.1);
   margin-top: 10px;
 }
 .plans-card li {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  font-size: 20px;
 }
 .plans-container {
   display: flex;
   justify-content: space-around;
+  padding: 50px;
 }
 .container-pricing-plans h2 {
   text-align: center;
@@ -234,31 +252,30 @@ footer p {
 }
 
 nav {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9vh;
+  font-size: larger;
+  font-weight:500;
 }
 
 nav a {
-  margin-right: 10px;
   text-decoration: none;
-  color: #fff;
 }
 
 .nav-container {
-  min-height: 9vh;
-  background-color: #fff;
+  background-color: #f6f6f6;
   color: black;
-  padding: 10px;
   width: 100%;
-  cursor: pointer;
+
 }
 .nav-items {
-  list-style: none;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
-
-
 .nav-items li {
   position: relative;
 }
