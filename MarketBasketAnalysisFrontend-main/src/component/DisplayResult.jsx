@@ -52,7 +52,7 @@ const DisplayResult = ({ data }) => {
       <p style={{ fontWeight: "bolder" }}>
         {" "}
         {item.antecedent}{" "}
-        <span style={{ color: "#e67e22", fontSize: "32px" }}> and</span>{" "}
+        <span style={{ color: "rgba(255, 0, 0, 0.7)", fontSize: "32px" }}> and</span>{" "}
         {item.consequent}{" "}
       </p>
     </div>
@@ -81,7 +81,7 @@ const DisplayResult = ({ data }) => {
         <h1>Recommended</h1>
         <p>
           These items can be used for{" "}
-          <span style={{ color: "#8e44ad", fontWeight: "bolder" }}>
+          <span style={{ color: "teal", fontWeight: "bolder" }}>
             cross selling{" "}
           </span>{" "}
         </p>
@@ -106,7 +106,7 @@ const DisplayResult = ({ data }) => {
             {Object.keys(sortedItemsAndCounts).map((key) => (
               <div
                 key={key}
-                style={{ backgroundColor: "#9b59b6", padding: "20px" }}
+                style={{ backgroundColor: "rgba(0, 128, 128, 0.8)", padding: "20px" }}
               >
                 <p style={{ color: "white" }}>Itemsets : {key}</p>
                 <p style={{ color: "white" }}>
@@ -128,7 +128,7 @@ const DisplayResult = ({ data }) => {
           {rules.map((rule, index) => (
             <div
               key={index}
-              style={{ backgroundColor: "#9b59b6", padding: "20px" }}
+              style={{ backgroundColor: "rgba(0, 128, 128, 0.8)", padding: "20px" }}
             >
               <p style={{ color: "white" }}>
                 {rule.antecedent} =&gt; {rule.consequent}

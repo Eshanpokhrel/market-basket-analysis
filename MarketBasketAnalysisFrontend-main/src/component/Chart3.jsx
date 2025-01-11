@@ -8,8 +8,8 @@ const SupportCountForItemsets = ({ itemsAndCounts }) => {
       {
         label: "Support Count",
         data: labels.map((label) => itemsAndCounts[label]),
-        borderColor: "rgba(75, 192, 192, 1)",
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(255, 0, 0, 0.5)",
+        backgroundColor: "rgba(255, 0, 0, 0.5)",
       },
     ],
   };

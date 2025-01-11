@@ -57,7 +57,7 @@ form input:focus{
 }
 .btn-register{
   color: #fff;
-  background: #009579;
+  background: teal;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -69,13 +69,13 @@ form input:focus{
   padding-right: 100px;
 }
 .btn-register:hover{
-  background: #006653;
+  background: teal;
   color:white;
   transition: .5s ease-in-out;
 
 }
 .btn-register:active {
-  background-color: rgb(0, 0, 255);
+  background-color: teal;
   color: white;
 }
 .image-upload-container {
@@ -89,7 +89,7 @@ form input:focus{
   margin-top: 10px;
 }
 .signup label{
-  color: #009579;
+  color: teal;
   cursor: pointer;
 }
 .signup label:hover{

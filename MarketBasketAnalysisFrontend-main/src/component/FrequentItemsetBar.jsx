@@ -13,7 +13,7 @@ const FrequentItemsetsCountChart = ({ itemsAndCounts }) => {
       {
         label: "Count",
         data: labels.map((label, index) => itemsAndCounts[Object.keys(itemsAndCounts)[index]]),
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        backgroundColor: "rgba(255, 165, 0, 0.3)",
       },
     ],
   };

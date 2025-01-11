@@ -49,7 +49,7 @@ const History = () => {
                   key={data.id}
                   style={{
                     margin: "20px",
-                    backgroundColor: "#9b59b6",
+                    backgroundColor: "rgba(0, 128, 128, 0.8)",
                     padding: "20px",
                   }}
                 >
@@ -81,4 +81,4 @@ const History = () => {
   );
 };
 export default History;
-9804363784;
+

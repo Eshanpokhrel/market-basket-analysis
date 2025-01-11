@@ -7,7 +7,7 @@ const ConfidenceLevelDistribution = ({ rules }) => {
       {
         label: "Confidence",
         data: rules.map((rule) => rule.confidence),
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        backgroundColor: "rgba(0, 128, 0, 0.3)",
       },
     ],
   };
