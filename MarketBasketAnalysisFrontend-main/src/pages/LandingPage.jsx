@@ -95,12 +95,11 @@ export default function LandingPage() {
       </section>
       <section id="pricing" className="container-pricing-plans">
         <div>
-          <div>
             <div>
               <h1>Energy Buying</h1>
               <p>
                 Buy energy for analysis. Each energy costs 20 Rs. You get 1 free
-                energy to start with, after which you need to buy more. 1 energy
+                energy to start with, after which you need to buy more. <br/>     1 energy
                 is used for each analysis.
               </p>
             </div>
@@ -123,7 +122,6 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-        </div>
       </section>
       <section id="howto" className="container-how-to-use">
         <div>
