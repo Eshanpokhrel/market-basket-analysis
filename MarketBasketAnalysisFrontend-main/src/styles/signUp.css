@@ -9,8 +9,7 @@
   width: 100%;
   height: auto;
   padding: 50px 100px 50px 440px;
-  border-radius: 7px;
-   background: #009579;
+   background: teal;
 }
 .signup-container-form h1{
   font-size: 2rem;
@@ -19,7 +18,8 @@
 }
 
 .signup-container-form {
-  background-color: white;
+  background-color: mintcream;
+  border-radius: 10px;
   width: 70%;
   height: auto;
   padding: 60px;
