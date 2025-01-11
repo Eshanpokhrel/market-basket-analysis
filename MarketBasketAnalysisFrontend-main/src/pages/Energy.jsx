@@ -50,7 +50,7 @@ const Energy = () => {
   return (
     <div className="energy-form">
       <div className="energy-info">
-        <h2 style={{ color: "#e67e22" }}>Energy</h2>
+        <h2 style={{ color: "teal" }}>Energy</h2>
         <p>
           Energy is used to perform market basket analyses. Each analysis
           requires one energy.

@@ -1,30 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
 .dashboard-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .dashboard-card {
-  background-color: #9b59b6;
-  color: white;
-  padding: 20px;
-  margin-bottom:  20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 128, 128, 0.8);
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dashboard-card h2 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 .dashboard-card p {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.oswald-uniquifier > {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 @media (max-width: 768px) {
-  .dashboard-container {
-    grid-template-columns: 1fr;
-  }
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
 }
