@@ -4,6 +4,7 @@ import { useStateContext } from "../context/ContextProvider";
 import { protectedApi } from "../config/axios";
 import "../styles/dashboard.css";
 
+
 const Home = () => {
   const { user, energyCount } = useStateContext();
   const [dashboardData, setDashboardData] = useState({
@@ -38,7 +39,7 @@ const Home = () => {
       const totalAnalysis = async () =>{
         try{
 
-          const response = await protectedApi.get("/analysis/totalAnalysis/${user.id}");
+          const response = await protectedApi.get(`/analysis/totalAnalysis/${user.id}`);
           if(response.data.success == true){
             setTotalAnalysisUser(response.data.count);
           }
@@ -83,31 +84,48 @@ const Home = () => {
           <div
             style={{
               display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
+              gap : "30px",
+              textTransform : "uppercase",
+              alignItems : "center",
+              marginTop : "50px",
+              justifyContent : "center",
             }}
           >
             <div
               style={{
-                backgroundColor: "#2ecc71",
+                backgroundColor: "rgba(0, 128, 128, 0.6)",
                 fontWeight: "bolder",
                 color: "black",
                 padding: "70px",
-                borderRadius: "5px",
+                borderRadius: "100%",
+                fontSize: "35px",
+                height: "300px",
+                width : "600px",
+                display : "flex",
+                alignItems : "center",
+                justifyContent : "center",
+                fontFamily: "'Oswald', serif",
               }}
             >
-              Total Energy: <strong>{energyCount}</strong>
+              Total Energy : &nbsp;{energyCount}
             </div>
             <div
               style={{
-                backgroundColor: "#2ecc71",
+                backgroundColor: "rgba(0, 128, 128, 0.6)",
                 fontWeight: "bolder",
                 color: "black",
                 padding: "70px",
-                borderRadius: "5px",
+                borderRadius: "100%",
+                fontSize: "35px",
+                height: "300px",
+                width : "600px",
+                display : "flex",
+                alignItems : "center",
+                justifyContent : "center",
+                fontFamily: "'Oswald', serif",
               }}
             >
-              Total Analysis Done: <strong>{totalAnalysisUser??'0'}</strong>
+              Total Analysis Done : &nbsp;{totalAnalysisUser??'0'}
             </div>
           </div>
         </>
