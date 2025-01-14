@@ -30,7 +30,9 @@
     font-weight: 400;
     font-style: normal;
 }
-
+.iconstyle{
+    color: aliceblue;
+}
 
 @media (max-width: 768px) {
     .dashboard-container {
