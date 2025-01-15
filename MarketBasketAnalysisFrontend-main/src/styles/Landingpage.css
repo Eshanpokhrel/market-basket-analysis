@@ -10,11 +10,11 @@
   margin-right: auto;
   margin-left: auto;
   height: 100vh;
-  padding: 100px;
+  padding: 60px;
 }
 .container-landing-page-mainpage h3{
   font-size: 3.3rem;
-  padding: 0 0 30px 50px;
+  padding: 0 0 10px 50px;
   color: teal;
 }
 
@@ -69,8 +69,6 @@ transform: scale(1.1);
   color: white;
 }
 
-
-
 .container-landing-page-mainpage a:hover {
   background-color: white;
   color: black;
@@ -79,19 +77,18 @@ transform: scale(1.1);
 .container-pricing-plans {
   font-family: "Arial", sans-serif;
   background-color: #c8d9e6;
-  padding: 30px 100px ;
+  height: 100vh;
+  padding: 60px ;
   display: flex;
   flex-direction: column;
 }
 
 .container-pricing-plans h1 {
   text-align: center;
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: teal;
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
-  padding: 50px;
-  margin-bottom: 20px;
   font-style: normal;
 }
 
@@ -171,7 +168,8 @@ transform: scale(1.1);
 .container-how-to-use {
   font-family: "Arial", sans-serif;
   background-color: #d4d4ce;
-  padding: 5rem 8rem;
+  height: 100vh;
+  padding: 60px;
 }
 .container-how-to-use h2 {
   color: #333;
@@ -185,7 +183,7 @@ transform: scale(1.1);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3px;
 }
 
 .container-how-to-use > div > div {
@@ -214,13 +212,14 @@ transform: scale(1.1);
 .container-join-team {
   background-color: #c8d9e6;;
   color: #fff;
-  padding: 150px;
+  padding: 180px;
+  height: 100vh;
   text-align: center;
   color: black;
 }
 
 .container-join-team h2 {
-  font-size: 2.5em;
+  font-size: 5rem;
   margin-bottom: 30px;
 }
 
@@ -230,7 +229,7 @@ transform: scale(1.1);
 }
 
 .container-join-team div {
-  max-width: 600px;
+  /* width: 600px; */
   margin: 0 auto;
 }
 
@@ -275,6 +274,7 @@ footer p {
 }
 
 nav {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -113,6 +113,5 @@
 
 .active_navlink {
     color: teal;
-!important;
     background-color: rgba(0, 128, 128, 0.1);;
 }
