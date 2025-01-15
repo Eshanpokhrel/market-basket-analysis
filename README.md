@@ -20,4 +20,4 @@ This project utilizes the FP-Growth algorithm for Market Basket Analysis, aiming
 - **Scalable Backend:**
   - A robust backend built with Express.js to manage data processing and facilitate communication 
     with the database.
-  - Integrates MongoDB for efficient storage and retrieval of transactional data
+  - Integrates MySQL for efficient storage and retrieval of transactional data
