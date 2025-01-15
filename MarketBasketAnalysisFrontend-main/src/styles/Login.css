@@ -11,8 +11,9 @@
   min-height: 100vh;
   width: 100%;
   place-items: center;
-  background: teal;
+  background: beige;
   padding: 100px;
+  box-shadow: inset 0px 0px 12px 2px black;
   
 }
 ::selection{
@@ -21,9 +22,9 @@
 }
 .wrapper{
   width: 380px;
-  background: #fff;
-  /* border-radius: 15px; */
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  background: #b0a8a8;
+  border-radius: 15px;
+  box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.2);
 }
 .wrapper .title{
   font-size: 35px;
@@ -31,7 +32,6 @@
   text-align: center;
   line-height: 100px;
   color: black;
-  user-select: none;
   border-radius: 15px 15px 0 0;
   /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
@@ -97,21 +97,21 @@ form .content input{
 }
 form .content label{
   color: #262626;
-  user-select: none;
   padding-left: 5px;
 }
 form .content .pass-link{
   color: "";
 }
 form .field input[type="submit"]{
-  color: #fff;
+  color: whitesmoke;
   border: none;
   padding-left: 0;
-  margin-top: -10px;
+  /* margin-top: -10px; */
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  background: teal;
+  background: #2f2f99;
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 form .field input[type="submit"]:active{
@@ -127,10 +127,7 @@ form .signup-link a{
   color: #4158d0;
   text-decoration: none;
 }
-form .pass-link a:hover,
-form .signup-link a:hover{
-  text-decoration: underline;
-}
+
 .checkbox{
   display: flex;
   margin-left: 10px;

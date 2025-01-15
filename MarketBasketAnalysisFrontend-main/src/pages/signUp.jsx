@@ -79,7 +79,7 @@ const SignUp = () => {
               />
             </div>
             <div className="email-container">
-              <label>Email</label>{" "}
+              <label>Email:</label>
               <input
                 type="email"
                 placeholder="Enter your  email"
@@ -91,7 +91,7 @@ const SignUp = () => {
               />
             </div>
             <div className="password-container">
-              <label>Password </label>{" "}
+              <label>Password: </label>
               <input
                 type="password"
                 placeholder="Enter your passowrd"
@@ -114,7 +114,7 @@ const SignUp = () => {
               />
             </div>
             <div>
-              <label htmlFor="owner_name">Owner Name:</label>{" "}
+              <label htmlFor="owner_name">Owner Name:</label>
               <input
                 type="text"
                 id="owner_name"
@@ -136,9 +136,11 @@ const SignUp = () => {
               />
             </div>
 
-            <button className="btn-register" type="submit" disabled={loading}>
-              {loading ? "Registering....": "Register"}
-            </button>
+            <div>
+              <button className="btn-register" type="submit" disabled={loading}>
+                {loading ? "Registering....": "Register"}
+              </button>
+            </div>
 
             <div className="signup">
               <span>

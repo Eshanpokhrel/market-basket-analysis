@@ -92,7 +92,7 @@ const Login = () => {
               <div className="signup-link">
                 Not a member? 
                   <Link to="/guest/register" ><a href="#">
-                  Signup now</a></Link>
+                  {" "}Signup now</a></Link>
               </div>
             </form>
           </div>{" "}
