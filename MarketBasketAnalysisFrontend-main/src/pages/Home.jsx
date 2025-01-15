@@ -1,9 +1,16 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useStateContext } from "../context/ContextProvider";
 import { protectedApi } from "../config/axios";
 import "../styles/dashboard.css";
-
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 
 const Home = () => {
   const { user, energyCount } = useStateContext();
@@ -15,7 +22,7 @@ const Home = () => {
   });
   const [totalAnalysisUser,setTotalAnalysisUser] = useState(null);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     if (user.role === "admin") {
@@ -81,7 +88,7 @@ const Home = () => {
         </>
       ) : (
         <>
-          <div
+          {/* <div
             style={{
               display: "flex",
               gap : "30px",
@@ -127,7 +134,49 @@ const Home = () => {
             >
               Total Analysis Done : &nbsp;{totalAnalysisUser??'0'}
             </div>
-          </div>
+          </div> */}
+          <Box height={70}>
+              <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+        <Grid item xs={8}>
+        <Stack
+        direction="row"
+        spacing={2}
+      >
+        <Card sx={{ minWidth: 70 + "%", height:150 }} className="gradient_card" style={{ background: "linear-gradient(158deg, rgba(40, 34, 70, 1) 0%, rgba(30, 47, 141, 1) 100%)" }}>
+     
+      <CardContent>
+     <div className="iconstyle"> <ShoppingCartIcon /></div>
+        <Typography variant="h5" gutterBottom sx={{ color: "#ffffff" }}>
+        {energyCount}
+        </Typography>
+        <Typography variant="body2" gutterBottom sx={{ color: "#ffffff" }} >
+        Total Enerygy
+        </Typography>
+      </CardContent>
+    </Card>
+    <Card sx={{ minWidth: 70 + "%", height:150 }} className="gradient_card" style={{  marginLeft: '90px', background: "linear-gradient(158deg, rgba(53, 138, 148, 1) 0%, rgba(91, 180, 96, 1) 100%)" }}>
+     
+     <CardContent>
+     <div className="iconstyle"> <SignalCellularAltIcon /></div>
+
+     <Typography variant="h5" gutterBottom sx={{ color: "#ffffff" }}>
+        {totalAnalysisUser ?? '0'}
+        </Typography>
+        <Typography variant="body2" gutterBottom sx={{ color: "#ffffff" }}>
+        Total Analysis Done
+        </Typography>
+     </CardContent>
+   </Card>
+  
+   </Stack>
+        </Grid>
+    
+
+      </Grid>
+
+      </Box>
+      </Box>
         </>
       )}
     </>
