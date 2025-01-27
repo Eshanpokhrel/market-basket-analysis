@@ -85,7 +85,7 @@ const Login = () => {
                   <label for="remember-me" className="rememberme">Remember me</label>
                </div> */}
               <div className="field">
-                <input  type="submit" value="login" />
+                <input  type="submit" value="Login" />
                   
               </div>
              

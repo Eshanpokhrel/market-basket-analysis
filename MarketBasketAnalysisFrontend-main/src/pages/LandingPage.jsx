@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/Landingpage.css";
 
-
-
-
-
 // import ButtonComponent from "../component/ButtonComponent";
 
 export default function LandingPage() {

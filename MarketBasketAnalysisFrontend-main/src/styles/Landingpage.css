@@ -6,7 +6,7 @@
 }
 
 .container-landing-page-mainpage {
-  background-color: #d4d4ce;
+  background-color: #f9f6f2;
   margin-right: auto;
   margin-left: auto;
   height: 100vh;
@@ -89,6 +89,7 @@ transform: scale(1.1);
   color: teal;
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
+  margin-bottom: 1.5rem;
   font-style: normal;
 }
 
@@ -167,7 +168,7 @@ transform: scale(1.1);
 
 .container-how-to-use {
   font-family: "Arial", sans-serif;
-  background-color: #d4d4ce;
+  background-color: #f9f6f2;
   height: 100vh;
   padding: 60px;
 }

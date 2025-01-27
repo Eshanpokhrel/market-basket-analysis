@@ -10,7 +10,7 @@ const sendMail =async (data) =>{
     });
 
     const mailOptions = {
-        from : "MBA<angdelimbume@gmail.com>",
+        from : "MBA<finalproject2081@gmail.com>",
         to: data.recepEmail,
         subject :  data.subject,
         html : data.html
