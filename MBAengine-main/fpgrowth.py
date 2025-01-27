@@ -216,6 +216,9 @@ def find_frequent_patterns(transactions, support_threshold):
 
 def generate_association_rules(patterns, confidence_threshold):
     rules = {}
+    # Calculate total number of transactions
+    total_transactions = max([patterns[pattern] for pattern in patterns if len(pattern) == 1])
+
     for itemset in patterns.keys():
         upper_support = patterns[itemset]
 
@@ -225,11 +228,30 @@ def generate_association_rules(patterns, confidence_threshold):
                 consequent = tuple(sorted(set(itemset) - set(antecedent)))
 
                 if antecedent in patterns:
-                    lower_support = patterns[antecedent]
-                    confidence = float(upper_support) / lower_support
+                    # Support of antecedent
+                    antecedent_support = patterns[antecedent]
+
+                    # Calculate confidence
+                    confidence = float(upper_support) / antecedent_support
 
                     if confidence >= confidence_threshold:
-                        rules[antecedent] = (consequent, confidence)
+                        # Calculate support of consequent
+                        consequent_support = 0
+                        if consequent in patterns:
+                            consequent_support = patterns[consequent]
+                        elif len(consequent) == 1 and consequent[0] in patterns:
+                            consequent_support = patterns[consequent[0],]
+
+                        # Calculate lift
+                        # Lift = Support(A∪B) / (Support(A) × Support(B))
+                        lift = 0
+                        if consequent_support > 0:
+                            lift = (float(upper_support) / total_transactions) / \
+                                  ((float(antecedent_support) / total_transactions) * \
+                                   (float(consequent_support) / total_transactions))
+
+                        # Store rule with confidence and lift
+                        rules[antecedent] = (consequent, confidence, lift)
 
     return rules
 
@@ -254,13 +276,19 @@ def upload_csv():
         association_rules = generate_association_rules(frequent_patterns, confidence_threshold)
 
         frequent_patterns_str_keys = {str(key): value for key, value in frequent_patterns.items()}
-        association_rules_str_keys = {str(key): value for key, value in association_rules.items()}
+        association_rules_str_keys = {
+                    str(key): {
+                        'consequent': str(value[0]),
+                        'confidence': value[1],
+                        'lift': value[2]
+                    } for key, value in association_rules.items()
+                }
 
         response = {
             'success': True,
             'message': 'Patterns mined successfully.',
             'frequent_patterns': frequent_patterns_str_keys,
-            'association_rules': association_rules_str_keys
+            'association_rules': association_rules_str_keys,
         }
         return jsonify(response)
 
