@@ -176,7 +176,7 @@ const UserLayout = () => {
                     <div className="user_profile">
                 <span
                   style={{
-                    color: energyCount > 0 ? "green" : "red",
+                    color: energyCount > 0 ? "teal" : "red",
                   }}
                 >
                   Energy {energyCount}
