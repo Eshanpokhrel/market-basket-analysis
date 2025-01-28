@@ -8,7 +8,7 @@ const LiftDistributionChart = ({ rules }) => {
         // eslint-disable-next-line react/prop-types
         .filter(rule => rule && typeof rule.lift === 'number')
         .sort((a, b) => b.lift - a.lift)
-        .slice(0, 10); // Take top 10 for better visualization
+        .slice(0, 20); // Take top 10 for better visualization
 
     // Create labels from rule combinations
     const labels = processedRules.map(
