@@ -14,4 +14,5 @@ const ConfidenceLevelDistribution = ({ rules }) => {
 
   return <Bar data={data} />;
 };
+
  export default ConfidenceLevelDistribution;

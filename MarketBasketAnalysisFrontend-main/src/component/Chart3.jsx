@@ -1,4 +1,4 @@
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 const SupportCountForItemsets = ({ itemsAndCounts }) => {
   const labels = Object.keys(itemsAndCounts);
@@ -14,6 +14,6 @@ const SupportCountForItemsets = ({ itemsAndCounts }) => {
     ],
   };
 
-  return <Line data={data} />;
+  return <Bar data={data} />;
 };
  export default SupportCountForItemsets; 
