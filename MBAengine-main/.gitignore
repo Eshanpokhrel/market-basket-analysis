@@ -1,3 +1,5 @@
 .idea
 venv
 __pycache__/
+Assignment-1_Data.csv
+claude-data-50.csv
