@@ -30,42 +30,88 @@ const DataUpload = () => {
       handleError("You don't have enough energy! Please purchase some");
       return;
     }
-    try {
-      //console.log(formData, user.id);
-      const res1 = await protectedApi.post("/energy/check-energy", {
-        userId: user.id,
-      });
-      if (res1.data.success !== true) {
-        handleError(res1.data.message);
-        return;
-      }
-      const response = await protectedApi.post(
-        "/analysis/upload",
-        { userId: user.id, dfile, ...formData },
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      if (response.data.success === true) {
-        e.target.reset();
-        settingToastMessage(response.data.message);
-        settingEnergyCount(response.data.energy_count);
-        settingCurrentResult(response.data.result);
-        navigate("/home/result")
-      }
-      if (response.data.success === false) {
-        
-        handleError(response.data.message);
-      }
-      console.log(response.data.error[0].message);
-    } catch (err) {
-      
-      console.log(err);
-    }finally{
-      setLoading(false);
+    // Replace your try block with this:
+try {
+  const res1 = await protectedApi.post("/energy/check-energy", {
+    userId: user.id,
+  });
+  
+  if (res1.data.success !== true) {
+    handleError(res1.data.message);
+    return;
+  }
+  
+  const response = await protectedApi.post(
+    "/analysis/upload",
+    { userId: user.id, dfile, ...formData },
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     }
+  );
+  
+  console.log("Full response data:", response.data); // Debug response structure
+  
+  if (response.data.success === true) {
+    e.target.reset();
+    settingToastMessage(response.data.message);
+    settingEnergyCount(response.data.energy_count);
+    
+    // Make sure the result property exists before setting it
+    if (response.data.result) {
+      settingCurrentResult(response.data.result);
+      navigate("/home/result");
+    } else {
+      handleError("Analysis completed but no results were returned");
+    }
+  } else {
+    handleError(response.data.message || "An error occurred during analysis");
+    // Only try to access error details if they exist
+    if (response.data.error && response.data.error.length > 0) {
+      console.log(response.data.error[0].message);
+    }
+  }
+} catch (err) {
+  handleError("Failed to process request");
+  console.log(err);
+}
+    // try {
+    //   //console.log(formData, user.id);
+    //   const res1 = await protectedApi.post("/energy/check-energy", {
+    //     userId: user.id,
+    //   });
+    //   if (res1.data.success !== true) {
+    //     handleError(res1.data.message);
+    //     return;
+    //   }
+    //   const response = await protectedApi.post(
+    //     "/analysis/upload",
+    //     { userId: user.id, dfile, ...formData },
+    //     {
+    //       headers: {
+    //         "Content-Type": "multipart/form-data",
+    //       },
+    //     }
+    //   );
+    //   if (response.data.success === true) {
+    //     e.target.reset();
+    //     settingToastMessage(response.data.message);
+    //     settingEnergyCount(response.data.energy_count);
+    //     settingCurrentResult(response.data.result);
+    //     navigate("/home/result")
+    //   }
+    //   if (response.data.success === false) {
+        
+    //     handleError(response.data.message);
+    //   }
+    //   console.log(response.data.error[0].message);
+    // } catch (err) {
+      
+    //   console.log(err);
+    // }finally{
+    //   setLoading(false);
+    // }
   };
 
   return (
